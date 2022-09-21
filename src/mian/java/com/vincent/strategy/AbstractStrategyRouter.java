@@ -58,8 +58,13 @@ public abstract class AbstractStrategyRouter<T, R> {
     /**
      * 类初始化时注册分发策略 Mapper
      */
-    @PostConstruct
-    private void abstractInit() {
+//    @PostConstruct
+//    private void abstractInit() {
+//        strategyMapper = registerStrategyMapper();
+//        Objects.requireNonNull(strategyMapper, "strategyMapper cannot be null");
+//    }
+
+    public AbstractStrategyRouter() {
         strategyMapper = registerStrategyMapper();
         Objects.requireNonNull(strategyMapper, "strategyMapper cannot be null");
     }
